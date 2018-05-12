@@ -33,7 +33,7 @@ class Solution {
         boolean carry = false;
 
         int totalInit = l1.val + l2.val;
-        if (totalInit >= 10) {
+        if (totalInit > 9) {
             totalInit -= 10;
             carry = true;
         }
@@ -47,10 +47,12 @@ class Solution {
             int val1 = 0;
             if (currentl1 != null) {
                 val1 = currentl1.val;
+                currentl1 = currentl1.next;
             }
             int val2 = 0;
             if (currentl2 != null) {
                 val2 = currentl2.val;
+                currentl2 = currentl2.next;
             }
             int total = 0;
 
@@ -59,19 +61,13 @@ class Solution {
                 carry = false;
             }
             total += val1 + val2;
-            if (total >= 10) {
+            if (total > 9) {
                 total -= 10;
                 carry = true;
             }
 
             currentReturned.next = new ListNode(total);
             currentReturned = currentReturned.next;
-            if (currentl1 != null) {
-                currentl1 = currentl1.next;
-            }
-            if (currentl2 != null) {
-                currentl2 = currentl2.next;
-            }
         }
         if (carry) {
             currentReturned.next = new ListNode(1);
