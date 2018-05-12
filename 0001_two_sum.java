@@ -2,6 +2,7 @@
  * NOTES
  * Solution is hard coded. For faster runtime use hash table as shown below.
  * First commented solution is two-pass while the second is one-pass.
+ * https://leetcode.com/problems/two-sum/description/
  */
 
 /*
