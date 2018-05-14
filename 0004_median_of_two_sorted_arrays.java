@@ -45,7 +45,8 @@ class Solution {
                     totalIndex++;
                     nums1Index++;
                 }
-            } while (nums1Index < nums1.length || nums2Index < nums2.length) {
+            }
+            while (nums1Index < nums1.length || nums2Index < nums2.length) {
                 if (nums1Index < nums1.length) {
                     total[totalIndex] = nums1[nums1Index];
                     totalIndex++;

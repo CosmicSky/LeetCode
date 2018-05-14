@@ -1,6 +1,6 @@
 /*
  * NOTES
- *
+ * Most important parts are remembering the last repeated index and checking the current size of the substring
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
  */
 
