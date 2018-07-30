@@ -1,5 +1,7 @@
 /*
  * NOTES
+ * String is immutable. Use StringBuilder to build a constantly updating String.
+ * Look for patterns by using examples
  * https://leetcode.com/problems/zigzag-conversion/description/
  */
 
@@ -34,6 +36,20 @@
 
 class Solution {
     public String convert(String s, int numRows) {
+        if (numRows == 1) return s;
 
+        StringBuilder returned = new StringBuilder();
+        int cycleLength = 2 * numRows - 2;
+        int stringLength = s.length();
+
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; i + j < stringLength; j += cycleLength) {
+                returned.append(s.charAt(i + j));
+                if ((i != 0) && (i != numRows - 1) && j + cycleLength - i < stringLength) {
+                    returned.append(s.charAt(j + cycleLength - i));
+                }
+            }
+        }
+        return returned.toString();
     }
 }
