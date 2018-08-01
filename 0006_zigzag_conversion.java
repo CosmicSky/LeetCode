@@ -1,7 +1,7 @@
 /*
  * NOTES
  * String is immutable. Use StringBuilder to build a constantly updating String.
- * Look for patterns by using examples
+ * look for patterns by using examples
  * https://leetcode.com/problems/zigzag-conversion/description/
  */
 
